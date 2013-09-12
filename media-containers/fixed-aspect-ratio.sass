@@ -1,0 +1,21 @@
+/*
+  Kann benutzt werden um ein festes Seiten-verhältnis bei dynamischen containern zu erzeugen.
+  Emmet:
+  .l-fixed-aspect-ratio>.l-fixed-aspect-ratio--inner
+
+.l-fixed-aspect-ratio,
+.google-maps
+  position: relative
+  /* padding-bottom bestimmt das Seitenverhältnis zu 100% */
+  padding-bottom: 66%
+  height: 0
+  overflow: hidden
+
+/* Subelement */
+.l-fixed-aspect-ratio--inner,
+.google-maps--map
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%

@@ -1,0 +1,57 @@
+/* line 3, breadcrumb-arrows.sass */
+.breadcrumb-arrows li {
+  display: inline-block;
+  line-height: 30px;
+  position: relative;
+}
+/* line 7, breadcrumb-arrows.sass */
+.breadcrumb-arrows li:before {
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: -2px;
+  border-style: solid;
+  border-width: 15px 0 15px 15px;
+  border-color: transparent transparent transparent white;
+  z-index: 0;
+}
+/* line 18, breadcrumb-arrows.sass */
+.breadcrumb-arrows li:first-child:before {
+  border-color: transparent;
+}
+/* line 20, breadcrumb-arrows.sass */
+.breadcrumb-arrows a:after {
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -15px;
+  border-style: solid;
+  border-width: 15px 0 15px 15px;
+  border-color: transparent transparent transparent #cccccc;
+  z-index: 10;
+}
+/* line 31, breadcrumb-arrows.sass */
+.breadcrumb-arrows .active a {
+  background: orange;
+  z-index: 100;
+}
+/* line 34, breadcrumb-arrows.sass */
+.breadcrumb-arrows .active a:after {
+  border-left-color: orange;
+}
+/* line 36, breadcrumb-arrows.sass */
+.breadcrumb-arrows a {
+  display: block;
+  background: #cccccc;
+  padding: 0 20px;
+}
+/* line 40, breadcrumb-arrows.sass */
+.breadcrumb-arrows a:hover {
+  background: pink;
+}
+/* line 42, breadcrumb-arrows.sass */
+.breadcrumb-arrows a:hover:after {
+  border-color: transparent transparent transparent pink;
+}
