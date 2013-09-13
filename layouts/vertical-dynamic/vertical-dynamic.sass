@@ -1,0 +1,53 @@
+// Emmet:
+// (header>.l-v-center)+(section.content>.l-v-center)+footer>.l-v-center>ul>li*3>a[href=#]
+
+// Cross-Browser:
+// IE8 with fix, no IE7
+
+// Method explained here:
+// http://css-tricks.com/centering-in-the-unknown/
+
+// TODO more doc
+
+html,
+body
+  // To avoid scrollbar
+  height: 99%
+
+.container
+  // needs to get 100% height as well
+  height: 100%
+
+
+
+header,
+footer
+  &:before
+    // ghost element to
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+
+
+header
+  display: block
+  height: 15%
+
+.content
+  display: block
+  height: 65%
+  overflow-y: auto
+
+footer
+  display: block
+  display: block
+  height: 20%
+
+.l-v-center
+  display: inline-block
+  vertical-align: middle
+  width: 100%
+
+.carousel
+  overflow: hidden

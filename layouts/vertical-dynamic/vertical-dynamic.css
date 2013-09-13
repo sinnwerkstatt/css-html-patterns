@@ -1,0 +1,51 @@
+/* line 12, vertical-dynamic.sass */
+html,
+body {
+  height: 99%;
+}
+
+/* line 17, vertical-dynamic.sass */
+.container {
+  height: 100%;
+}
+
+/* line 25, vertical-dynamic.sass */
+header:before,
+footer:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* line 32, vertical-dynamic.sass */
+header {
+  display: block;
+  height: 15%;
+}
+
+/* line 36, vertical-dynamic.sass */
+.content {
+  display: block;
+  height: 65%;
+  overflow-y: auto;
+}
+
+/* line 41, vertical-dynamic.sass */
+footer {
+  display: block;
+  display: block;
+  height: 20%;
+}
+
+/* line 46, vertical-dynamic.sass */
+.l-v-center {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* line 51, vertical-dynamic.sass */
+.carousel {
+  overflow: hidden;
+}
