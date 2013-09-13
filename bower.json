@@ -1,0 +1,16 @@
+{
+  "name": "css-html-patterns",
+  "version": "0.0.1",
+  "homepage": "https://github.com/sinnwerkstatt/css-html-patterns",
+  "authors": [
+    "johannesjo <jmillan@web.de>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

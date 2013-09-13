@@ -1,51 +1,46 @@
-/* line 12, vertical-dynamic.sass */
+/* line 13, vertical-dynamic.sass */
 html,
 body {
   height: 99%;
 }
 
-/* line 17, vertical-dynamic.sass */
+/* line 18, vertical-dynamic.sass */
 .container {
   height: 100%;
 }
 
-/* line 25, vertical-dynamic.sass */
+/* line 24, vertical-dynamic.sass */
 header:before,
 footer:before {
   content: "";
   display: inline-block;
   height: 100%;
   vertical-align: middle;
+  margin-left: -0.3em;
 }
 
-/* line 32, vertical-dynamic.sass */
+/* line 33, vertical-dynamic.sass */
 header {
+  height: 20%;
   display: block;
-  height: 15%;
 }
 
-/* line 36, vertical-dynamic.sass */
+/* line 38, vertical-dynamic.sass */
 .content {
   display: block;
-  height: 65%;
+  height: 60%;
   overflow-y: auto;
 }
 
-/* line 41, vertical-dynamic.sass */
+/* line 44, vertical-dynamic.sass */
 footer {
-  display: block;
   display: block;
   height: 20%;
 }
 
-/* line 46, vertical-dynamic.sass */
+/* line 48, vertical-dynamic.sass */
 .l-v-center {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-}
-
-/* line 51, vertical-dynamic.sass */
-.carousel {
-  overflow: hidden;
 }

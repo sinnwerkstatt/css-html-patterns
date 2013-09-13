@@ -2,12 +2,13 @@
 // (header>.l-v-center)+(section.content>.l-v-center)+footer>.l-v-center>ul>li*3>a[href=#]
 
 // Cross-Browser:
-// IE8 with fix, no IE7
+// IE8 with fixes, no IE7
 
 // Method explained here:
 // http://css-tricks.com/centering-in-the-unknown/
 
 // TODO more doc
+// TODO fall-back for ie with fixed heights
 
 html,
 body
@@ -18,29 +19,29 @@ body
   // needs to get 100% height as well
   height: 100%
 
-
-
 header,
 footer
   &:before
-    // ghost element to
+    // ghost element which is used by the .l-v-center to align itself vertically to
     content: ''
     display: inline-block
     height: 100%
     vertical-align: middle
-
+    // required to prevent jumping to next 'line'
+    margin-left: -0.3em
 
 header
+  height: 20%
+  // min-values could be specified here and should be (min --> line-height)
   display: block
-  height: 15%
 
 .content
   display: block
-  height: 65%
+  height: 60%
+  // adding a scrollbar for extensive content
   overflow-y: auto
 
 footer
-  display: block
   display: block
   height: 20%
 
@@ -48,6 +49,3 @@ footer
   display: inline-block
   vertical-align: middle
   width: 100%
-
-.carousel
-  overflow: hidden
