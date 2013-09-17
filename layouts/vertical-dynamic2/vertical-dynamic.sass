@@ -1,0 +1,38 @@
+// Emmet:
+// (header>.l-table>.l-table--cell>.l-table--center)+(section.content>.l-table>.l-table--cell>.l-table--center+footer>.l-table>.l-table--cell>.l-table--center
+
+// Cross-Browser:
+// IE8 with fixes, no IE7
+
+// Method explained here:
+// http://www.456bereastreet.com/archive/201103/flexible_height_vertical_centering_with_css_beyond_ie7/
+
+// TODO more doc
+// TODO fall-back for ie with fixed heights
+
+html,
+body
+  // To avoid scrollbar
+  height: 100%
+
+.container
+  // needs to get 100% height as well
+  height: 100%
+
+header,
+footer,
+.content
+  height: 33%
+  overflow-y: auto
+
+
+.l-table
+  display: table
+  height: 100%
+
+.l-table--cell
+  display: table-cell
+  vertical-align: middle
+
+.l-table--center
+  margin: 0 auto
