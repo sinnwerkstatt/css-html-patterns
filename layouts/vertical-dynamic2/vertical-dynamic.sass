@@ -1,21 +1,19 @@
 // Emmet:
-// (header>.l-table>.l-table--cell>.l-table--center)+(section.content>.l-table>.l-table--cell>.l-table--center+footer>.l-table>.l-table--cell>.l-table--center
-
-// Cross-Browser:
-// IE8 out of the box
-// IE7 use polyfill:
-// http://tanalin.com/en/projects/display-table-htc/
+ (header>.l-table>.l-table--cell>.l-table--center)+(section.content>.l-table>.l-table--cell>.l-table--center+footer>.l-table>.l-table--cell>.l-table--center
 
 // Method explained here:
-// http://www.456bereastreet.com/archive/201103/flexible_height_vertical_centering_with_css_beyond_ie7/
+  http://www.456bereastreet.com/archive/201103/flexible_height_vertical_centering_with_css_beyond_ie7/
 
-// TODO more doc
-// TODO fall-back for ie with fixed heights
+// Cross-Browser:
+  IE8 out of the box
+  IE7 use polyfill:
+  http://tanalin.com/en/projects/display-table-htc/
 
 // shared $vars
 $header-min-h: 100px
 $footer-min-h: 100px
 
+/******** Main Layout Blocks ********/
 html,
 body
   // To avoid scrollbar
@@ -24,10 +22,6 @@ body
 .container
   // ^ needs to get 100% height as well
   height: 100%
-
-  // generic styles for demonstration
-  margin: auto
-  max-width: 800px
 
 header
   height: 20%
@@ -43,14 +37,12 @@ footer
   height: 60%
   overflow-y: auto
 
-// layout-classes for centering
+/******** Layout-Classes for centering ********/
 .l-table
   display: table
   height: 100%
-
-.lt-ie8
-  .l-table
-    // polyfill for IE7
+  .lt-ie8 &
+    // Polyfill for IE7 applied with parent selector
     behavior: url(polyfills/display-table.min.htc)
 
 .l-table--cell
