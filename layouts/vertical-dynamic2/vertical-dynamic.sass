@@ -2,7 +2,9 @@
 // (header>.l-table>.l-table--cell>.l-table--center)+(section.content>.l-table>.l-table--cell>.l-table--center+footer>.l-table>.l-table--cell>.l-table--center
 
 // Cross-Browser:
-// IE8 with fixes, no IE7
+// IE8 out of the box
+// IE7 use polyfill:
+// http://tanalin.com/en/projects/display-table-htc/
 
 // Method explained here:
 // http://www.456bereastreet.com/archive/201103/flexible_height_vertical_centering_with_css_beyond_ie7/
@@ -10,25 +12,46 @@
 // TODO more doc
 // TODO fall-back for ie with fixed heights
 
+// shared $vars
+$header-min-h: 100px
+$footer-min-h: 100px
+
 html,
 body
   // To avoid scrollbar
   height: 100%
 
 .container
-  // needs to get 100% height as well
+  // ^ needs to get 100% height as well
   height: 100%
 
-header,
-footer,
+  // generic styles for demonstration
+  margin: auto
+  max-width: 800px
+
+header
+  height: 20%
+  // arbitrary min-height; use $vars to match brand (maybe + nav) and header height
+  min-height: $header-min-h
+
+footer
+  height: 20%
+  // same here
+  min-height: $footer-min-h
+
 .content
-  height: 33%
+  height: 60%
   overflow-y: auto
 
-
+// layout-classes for centering
 .l-table
   display: table
   height: 100%
+
+.lt-ie8
+  .l-table
+    // polyfill for IE7
+    behavior: url(polyfills/display-table.min.htc)
 
 .l-table--cell
   display: table-cell
@@ -36,3 +59,16 @@ footer,
 
 .l-table--center
   margin: 0 auto
+
+// IE7 fix approach 2
+//.lt-ie8
+//  header,
+//  footer,
+//  .content
+//    height: auto
+//  header
+//    margin: 20px 0
+//  footer
+//    margin: 20px 0
+//  .content
+//    margin: 20px 0

@@ -1,35 +1,52 @@
-/* line 13, vertical-dynamic.sass */
+/* line 19, vertical-dynamic.sass */
 html,
 body {
   height: 100%;
 }
 
-/* line 18, vertical-dynamic.sass */
+/* line 24, vertical-dynamic.sass */
 .container {
   height: 100%;
+  margin: auto;
+  max-width: 800px;
 }
 
-/* line 22, vertical-dynamic.sass */
-header,
-footer,
+/* line 32, vertical-dynamic.sass */
+header {
+  height: 20%;
+  min-height: 100px;
+}
+
+/* line 37, vertical-dynamic.sass */
+footer {
+  height: 20%;
+  min-height: 100px;
+}
+
+/* line 42, vertical-dynamic.sass */
 .content {
-  height: 33%;
+  height: 60%;
   overflow-y: auto;
 }
 
-/* line 29, vertical-dynamic.sass */
+/* line 47, vertical-dynamic.sass */
 .l-table {
   display: table;
   height: 100%;
 }
 
-/* line 33, vertical-dynamic.sass */
+/* line 52, vertical-dynamic.sass */
+.lt-ie8 .l-table {
+  behavior: url(polyfills/display-table.min.htc);
+}
+
+/* line 56, vertical-dynamic.sass */
 .l-table--cell {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 37, vertical-dynamic.sass */
+/* line 60, vertical-dynamic.sass */
 .l-table--center {
   margin: 0 auto;
 }
