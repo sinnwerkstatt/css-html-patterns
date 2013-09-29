@@ -9,5 +9,7 @@ This repository is a good place to do so. Develop a pattern, check if it is work
 
 Others will be thankful, including your futre self ;)
 
-
+# Pattern Overview
+## Layout Patterns
+[vertical full height layout with centered content in header, footer and content](http://codepen.io/johannesjo/pen/bmlnD)
 
