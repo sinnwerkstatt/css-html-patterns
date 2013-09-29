@@ -11,6 +11,8 @@ Others will be thankful, including your futre self ;)
 
 # Pattern Overview
 ## Layout Patterns
-[vertical full height layout with centered content in header, footer and content](http://codepen.io/johannesjo/pen/bmlnD)
+* [vertical full height layout with centered content in header, footer and content](http://codepen.io/johannesjo/pen/bmlnD)
 ## Navigations
-[Vertical css arrow-naviagtion](http://codepen.io/johannesjo/pen/dwnfa)
+* [Vertical css arrow-naviagtion](http://codepen.io/johannesjo/pen/dwnfa)
+## Components
+* ...
